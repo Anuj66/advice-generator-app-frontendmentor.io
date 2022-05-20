@@ -1,0 +1,54 @@
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--neutral-dark-blue);
+}
+
+.main-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--neutral-dark-grayish-blue);
+    border-radius: 1.5rem;
+    width: 40%;
+    position: relative;
+}
+
+.advice-header h3 {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    margin: 1.5rem 0 0.5rem 0;
+    color: var(--primary-neon-green);
+}
+
+.advice-content {
+    font-size: 28px;
+    color: var(--primary-light-cyan);
+    width: 80%;
+    text-align: center;
+}
+
+.advice-footer {
+    margin-bottom: 3.5rem;
+    color: var(--primary-light-cyan);
+}
+
+.advice-button button {
+    background-color: var(--primary-neon-green);
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 246px;
+    bottom: -2rem;
+    border: 1px solid transparent;
+    width: 10%;
+    transition: ease 500ms;
+
+}
+
+.advice-button button:hover {
+    box-shadow: 0 0 25px 5px aquamarine;
+}

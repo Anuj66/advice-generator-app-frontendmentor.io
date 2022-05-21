@@ -36,13 +36,17 @@
     color: var(--primary-light-cyan);
 }
 
+.advice-footer img {
+    width: 100%;
+}
+
 .advice-button button {
     background-color: var(--primary-neon-green);
     border-radius: 100%;
     aspect-ratio: 1/1;
     position: absolute;
-    right: 246px;
-    bottom: -2rem;
+    right: 45%;
+    bottom: -10%;
     border: 1px solid transparent;
     width: 10%;
     transition: ease 500ms;
@@ -51,4 +55,33 @@
 
 .advice-button button:hover {
     box-shadow: 0 0 25px 5px aquamarine;
+}
+
+@media screen and (max-width: 375px) {
+    .main-card {
+        width: 90%;
+    }
+
+    .advice-header h3 {
+        font-size: 0.6rem;
+        margin: 1rem 0 0.25rem 0;
+    }
+
+    .advice-content p {
+        font-size: 20px;
+    }
+
+    .advice-footer {
+        margin-bottom: 2.5rem;
+    }
+
+    .advice-footer img {
+        width: 100%;
+    }
+
+    .advice-button button {
+        right: 43%;
+        bottom: -10%;
+        width: 15%;
+    }
 }

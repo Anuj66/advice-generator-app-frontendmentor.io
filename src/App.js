@@ -1,7 +1,7 @@
 import "./App.css";
 import divider from "./images/pattern-divider-desktop.svg";
 import iconDice from "./images/icon-dice.svg";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 function App() {
   const [advice, setAdvice] = useState("");
@@ -15,30 +15,32 @@ function App() {
   }
 
   useEffect(() => {
-    getAdvice().then((data) => {
-      console.log(data);
-    });
+    async function fetchData() {
+      await getAdvice();
+    }
+
+    fetchData()
   }, []);
 
   return (
-    <div className={"main-body"}>
-      <div className={"main-card"}>
-        <div className={"advice-header"}>
-          <h3>ADVICE #{id}</h3>
-        </div>
-        <div className={"advice-content"}>
-          <p>"{advice}"</p>
-        </div>
-        <div className={"advice-footer"}>
-          <img src={divider} alt="Divider on desktop" />
-        </div>
-        <div className={"advice-button"}>
-          <button onClick={getAdvice}>
-            <img src={iconDice} alt="" />
-          </button>
+      <div className={"main-body"}>
+        <div className={"main-card"}>
+          <div className={"advice-header"}>
+            <h3>ADVICE #{id}</h3>
+          </div>
+          <div className={"advice-content"}>
+            <p>"{advice}"</p>
+          </div>
+          <div className={"advice-footer"}>
+            <img src={divider} alt="Divider on desktop"/>
+          </div>
+          <div className={"advice-button"}>
+            <button onClick={getAdvice}>
+              <img src={iconDice} alt="Glowing Icon Button"/>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
 
